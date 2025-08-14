@@ -4,7 +4,7 @@
 typedef struct {
 
     int RGA;
-    int nome[51];
+    char nome[51];
     float nota1, nota2, nota3;
     float media;
     int aprovado; /* 1 = aprovado | 0 = reprovado */
@@ -21,6 +21,8 @@ int main(void) {
     int opcao;
     int RGA;
     int pos_aluno;
+    int encontrou;
+    int i;
     /* --- Fim das declarações de variáveis --- */
 
     do {
@@ -51,7 +53,7 @@ int main(void) {
                     alunos[n].RGA = RGA;
                     printf("Informe o seu nome:");
                     scanf(" %[^\n]", alunos[n].nome);
-                    prinf("Informe as suas notas: ");
+                    printf("Informe as suas notas: ");
                     scanf("%f %f %f", &alunos[n].nota1, &alunos[n].nota2, &alunos[n].nota3);
                     alunos[n].media = (alunos[n].nota1 + alunos[n].nota2 + alunos[n].nota3) / 3;
                     if (alunos[n].media >= 6) {
@@ -89,7 +91,7 @@ int main(void) {
                 if (!encontrou) {
                     printf("\n Aluno não cadastrado!");
                 } else {
-                    prinf("Digite suas novas notas: ");
+                    printf("Digite suas novas notas: ");
                     scanf("%f %f %f", &alunos[pos_aluno].nota1, &alunos[pos_aluno].nota2, &alunos[pos_aluno].nota3);
                     alunos[pos_aluno].media = (alunos[pos_aluno].nota1 + alunos[pos_aluno].nota2 + alunos[pos_aluno].nota3) / 3;
                     if (alunos[pos_aluno].media >= 6) {
@@ -131,7 +133,7 @@ int menu() {
     int opcao;
 
     printf("MENU");
-    scanf("%d", opcao)
+    scanf("%d", &opcao);
 
     return opcao;
 }
