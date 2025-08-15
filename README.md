@@ -13,8 +13,9 @@ O sistema utiliza um **vetor de structs** para armazenar no máximo **50 alunos*
 
 - ✅ Criar `struct` para representar os alunos (nome, RGA, três notas e média de aproveitamento - MA)
 - ✅ Implementar função para **cadastrar novo aluno**
+- ✅ Implementar função para **atualizar notas** de um aluno pelo RGA
+- ✅ Implementar função de busca dos alunos já cadastrados
 - ⬜ Implementar função para **remover aluno** pelo RGA
-- ⬜ Implementar função para **atualizar notas** de um aluno pelo RGA
 - ⬜ Exibir **aprovados**:
   - ⬜ Mostrar nome, três notas e MA  
   - ⬜ Ordenar **por nome (ordem alfabética crescente)**
