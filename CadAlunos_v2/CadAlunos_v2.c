@@ -54,10 +54,16 @@ int main(void) {
                     }
                     n++;
                 }
+                printf("\nPressione ENTER para continuar...\n");
+                getchar(); /* consome o \n que sobrou do scanf */
+                getchar(); /* espera o ENTER */
                 break;
 
             case 2: /* Remover um aluno através do RGA */
                 printf("Excluir Aluno!\n");
+                printf("\nPressione ENTER para continuar...\n");
+                getchar();
+                getchar();
                 break;
 
             case 3: /* Atualizar dados do aluno pelo RGA */
@@ -79,18 +85,34 @@ int main(void) {
                         alunos[pos_aluno].aprovado = 0;
                     }
                 }
+                printf("\nPressione ENTER para continuar...\n");
+                getchar();
+                getchar();
                 break;
 
             case 4: /* Relatórios */
                 printf("Exibir o relatórios!\n");
+                printf("\nPressione ENTER para continuar...\n");
+                getchar();
+                getchar();
                 break;
 
             case 5: /* Mostrar todos os dados */
                 printf("\n RGA \t Nome \t N1 \t N2 \t N3 \t Média \t Aprovado");
                 printf("\n --- \t ---- \t -- \t -- \t -- \t ----- \t --------");
                 for (i = 0; i < n; i++) {
-                    printf("\n %d \t %s \t %.2f \t %.2f \t %.2f \t %.2f \t %d", alunos[n].RGA, alunos[n].nome, alunos[n].nota1, alunos[n].nota2, alunos[n].nota3, alunos[n].media, alunos[n].aprovado);
+                    printf("\n %d \t %s \t %.2f \t %.2f \t %.2f \t %.2f \t %d",
+                        alunos[n - 1].RGA,
+                        alunos[n - 1].nome,
+                        alunos[n - 1].nota1,
+                        alunos[n - 1].nota2,
+                        alunos[n - 1].nota3,
+                        alunos[n - 1].media,
+                        alunos[n - 1].aprovado);
                 }
+                printf("\nPressione ENTER para continuar...\n");
+                getchar();
+                getchar();
                 break;
 
             case 0: /* Encerrar Sistema */
@@ -99,6 +121,9 @@ int main(void) {
 
             default:
                 printf("Opção inválida!\n");
+                printf("\nPressione ENTER para continuar...\n");
+                getchar();
+                getchar();
                 break;
         } /* Fim do Switch Case */
 
